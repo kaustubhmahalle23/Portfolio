@@ -3,9 +3,9 @@ import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    user_name: '',
     subject: '',
-    email: '',
+    user_email: '',
     message: ''
   });
 
@@ -16,11 +16,11 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData, 'YOUR_USER_ID')
+    emailjs.send('service_a7cottv', 'template_xg6jcrt', formData, '5YI8hLlKBhdIrB5q2')
       .then((result) => {
           console.log(result.text);
           alert('Message sent successfully!');
-          setFormData({ name: '', subject: '', email: '', message: '' });
+          setFormData({ user_name: '', subject: '', user_email: '', message: '' });
       }, (error) => {
           console.log(error.text);
           alert('An error occurred, please try again.');
@@ -33,7 +33,7 @@ const Contact = () => {
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input 
           type="text" 
-          name="name" 
+          name="user_name" 
           value={formData.name} 
           onChange={handleChange} 
           placeholder="Name" 
@@ -51,7 +51,7 @@ const Contact = () => {
         />
         <input 
           type="email" 
-          name="email" 
+          name="user_email" 
           value={formData.email} 
           onChange={handleChange} 
           placeholder="Email" 

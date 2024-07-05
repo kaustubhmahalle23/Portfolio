@@ -2,7 +2,7 @@ import React from "react";
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/hero-img.png";
 import { motion } from "framer-motion";
-
+import { Link } from "react-scroll";
 
 
 const container = (delay) => ({
@@ -27,7 +27,12 @@ const iconVarients = (duration) => ({
     }
 })
 
-const Hero = () => {
+
+
+const Hero = ({scrollToContact}) => {
+
+
+
   return (
     <div className="border-b border-neutral-900 pb-4 lg:mb-35">
       <div className="flex flex-wrap">
@@ -69,14 +74,15 @@ const Hero = () => {
               alt=""
             />
           </div>
-          <a href="">
-          <motion.div
+          
+          <Link to="Contact" smooth={true} duration={1000}>
+          <motion.button 
             className="w-1/3 mx-auto p-3 text-2xl mt-2 flex justify-center rounded-2xl border-4 border-neutral-100"
             variants={iconVarients(1)}
     initial="initial"
     animate='animate'>
             Hire Me !
-          </motion.div></a>
+          </motion.button></Link>
         </div>
       </div>
     </div>

@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useImperativeHandle, useState } from 'react';
 import emailjs from 'emailjs-com';
+import { useRef } from 'react';
+
 
 const Contact = () => {
+
+
   const [formData, setFormData] = useState({
     user_name: '',
     subject: '',
@@ -28,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="border-b border-neutral-900 pb-20 p-4 max-w-lg mx-auto ">
+    <div id='Contact' className="border-b border-neutral-900 pb-20 p-4 max-w-lg mx-auto ">
       <h1 className="my-10 text-center text-4xl text-neutral-500">Contact</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input 

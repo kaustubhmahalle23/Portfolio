@@ -34,7 +34,7 @@ const Hero = ({scrollToContact}) => {
 
 
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
+    <div className="border-b border-neutral-200 pb-4 lg:mb-35">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -58,7 +58,7 @@ const Hero = ({scrollToContact}) => {
               variants={container(1)}
               initial="hidden"
               animate="visible"
-              className="my-2 max-w-xl py-6 font-light tracking-tighter"
+              className="my-2 max-w-xl py-6 tracking-tighter text-2xl"
             >
               {HERO_CONTENT}
             </motion.p>
